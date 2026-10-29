@@ -1,0 +1,37 @@
+<!-- Acente Paneli > Hesap Ekstresi (<main> içine include edilir) -->
+<link rel="stylesheet" href="/assets/css/acente.css">
+<div class="ap-page">
+  <div class="ap-wrap">
+    <h1 class="ap-title">Hesap Ekstresi</h1>
+
+    <nav class="ap-tabs">
+      <a href="dashboard.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Dashboard</a>
+      <a href="rezervasyonlar.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Rezervasyonlar</a>
+      <a href="seferlerim.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>Seferlerim</a>
+      <a href="hesap-ekstresi.html" class="ap-tab active"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Hesap Ekstresi</a>
+      <a href="limit-ekle.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Limit Ekle</a>
+      <a href="hesap-bilgileri.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>Hesap Bilgileri</a>
+    </nav>
+
+    <form class="ap-card ap-filter cols-3" onsubmit="return false;">
+      <div><label class="ap-label" for="heBas">İlk Tarih</label><input id="heBas" type="text" class="ap-input ap-date" placeholder="gg.aa.yyyy" autocomplete="off"></div>
+      <div><label class="ap-label" for="heSon">Son Tarih</label><input id="heSon" type="text" class="ap-input ap-date" placeholder="gg.aa.yyyy" autocomplete="off"></div>
+      <button type="submit" class="ap-btn ap-btn-primary"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>Ara</button>
+    </form>
+
+    <div class="ap-card">
+      <div class="ap-card-head" style="justify-content:flex-end">
+        <button type="button" class="ap-icon-btn excel" title="Excel'e Aktar"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>Excel</button>
+      </div>
+      <table class="ap-table">
+        <thead><tr><th>Tarih</th><th>Açıklama</th><th>Belge No</th><th class="num">Borç</th><th class="num">Alacak</th><th class="num">Bakiye</th></tr></thead>
+        <tbody>
+          <tr><td data-label="Tarih">20.10.2026</td><td data-label="Açıklama">Kredi kartı ile limit yükleme</td><td data-label="Belge No">YK-5521</td><td data-label="Borç" class="num">-</td><td data-label="Alacak" class="num text-plus">5.000,00 ₺</td><td data-label="Bakiye" class="num">12.450,00 ₺</td></tr>
+          <tr><td data-label="Tarih">25.10.2026</td><td data-label="Açıklama">Rezervasyon BT-100245</td><td data-label="Belge No">BT-100245</td><td data-label="Borç" class="num text-minus">3.400,00 ₺</td><td data-label="Alacak" class="num">-</td><td data-label="Bakiye" class="num">9.050,00 ₺</td></tr>
+          <tr><td data-label="Tarih">26.10.2026</td><td data-label="Açıklama">Rezervasyon BT-100246</td><td data-label="Belge No">BT-100246</td><td data-label="Borç" class="num text-minus">1.600,00 ₺</td><td data-label="Alacak" class="num">-</td><td data-label="Bakiye" class="num">7.450,00 ₺</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script>if (window.flatpickr) flatpickr('.ap-date', { locale: 'tr', dateFormat: 'd.m.Y' });</script>

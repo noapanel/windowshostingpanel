@@ -1,0 +1,42 @@
+<!-- Acente Paneli > Hesap Bilgileri (<main> içine include edilir) -->
+<link rel="stylesheet" href="/assets/css/acente.css">
+<div class="ap-page">
+  <div class="ap-wrap">
+    <h1 class="ap-title">Hesap Bilgileri</h1>
+
+    <nav class="ap-tabs">
+      <a href="dashboard.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Dashboard</a>
+      <a href="rezervasyonlar.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Rezervasyonlar</a>
+      <a href="seferlerim.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>Seferlerim</a>
+      <a href="hesap-ekstresi.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Hesap Ekstresi</a>
+      <a href="limit-ekle.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Limit Ekle</a>
+      <a href="hesap-bilgileri.html" class="ap-tab active"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>Hesap Bilgileri</a>
+    </nav>
+
+    <div class="ap-two-col">
+      <div class="ap-card">
+        <h2 class="ap-card-title" style="margin-bottom:.5rem">Acente Bilgileri</h2>
+        <dl class="ap-dl">
+          <div><dt>Acente Kodu</dt><dd>AC-1042</dd></div>
+          <div><dt>Acente Ünvanı</dt><dd>Güneş Turizm Seyahat Acentası Ltd. Şti.</dd></div>
+          <div><dt>Yetkili Kişi</dt><dd>Ahmet Yılmaz</dd></div>
+          <div><dt>Telefon</dt><dd>+90 242 514 13 10</dd></div>
+          <div><dt>E-posta</dt><dd>acente@example.com</dd></div>
+          <div><dt>Vergi No</dt><dd>1234567890</dd></div>
+          <div><dt>Adres</dt><dd>Atatürk Cd. No:152 Alanya / ANTALYA</dd></div>
+          <div><dt>Bakiye</dt><dd>12.450,00 ₺</dd></div>
+        </dl>
+      </div>
+
+      <div class="ap-card">
+        <h2 class="ap-card-title" style="margin-bottom:1rem">Şifre Değiştir</h2>
+        <form class="ap-form-grid" onsubmit="return false;" style="grid-template-columns:1fr">
+          <div><label class="ap-label" for="pwOld">Mevcut Şifre</label><input id="pwOld" type="password" class="ap-input" autocomplete="current-password"></div>
+          <div><label class="ap-label" for="pwNew">Yeni Şifre</label><input id="pwNew" type="password" class="ap-input" autocomplete="new-password" minlength="8"><p class="ap-hint">En az 8 karakter.</p></div>
+          <div><label class="ap-label" for="pwNew2">Yeni Şifre (Tekrar)</label><input id="pwNew2" type="password" class="ap-input" autocomplete="new-password" minlength="8"></div>
+          <button type="submit" class="ap-btn ap-btn-primary ap-btn-block">Şifreyi Güncelle</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

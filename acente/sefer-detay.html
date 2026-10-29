@@ -1,0 +1,64 @@
+<!-- Acente Paneli > Sefer Detay (<main> içine include edilir) -->
+<link rel="stylesheet" href="/assets/css/acente.css">
+<div class="ap-page">
+  <div class="ap-wrap">
+    <h1 class="ap-title">Sefer Detayı</h1>
+
+    <nav class="ap-tabs">
+      <a href="dashboard.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Dashboard</a>
+      <a href="rezervasyonlar.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Rezervasyonlar</a>
+      <a href="seferlerim.html" class="ap-tab active"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>Seferlerim</a>
+      <a href="hesap-ekstresi.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Hesap Ekstresi</a>
+      <a href="limit-ekle.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Limit Ekle</a>
+      <a href="hesap-bilgileri.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>Hesap Bilgileri</a>
+    </nav>
+
+    <!-- Sefer bilgileri -->
+    <div class="ap-card">
+      <div class="ap-card-head">
+        <h2 class="ap-card-title">Sefer Bilgileri</h2>
+        <a href="seferlerim.html" class="ap-btn ap-btn-outline">← Listeye Dön</a>
+      </div>
+      <dl class="ap-dl">
+        <div><dt>Sefer No</dt><dd>SF-20551</dd></div>
+        <div><dt>Durum</dt><dd><span class="ap-badge orange">Onay Bekliyor</span></dd></div>
+        <div><dt>Tarih / Saat</dt><dd>30.10.2026 09:30</dd></div>
+        <div><dt>Başlangıç Adresi</dt><dd>Antalya Havalimanı (AYT) - Dış Hatlar</dd></div>
+        <div><dt>Bitiş Adresi</dt><dd>Alanya, Atatürk Cd. No:152, Otel Güneş</dd></div>
+        <div><dt>Araç Tipi</dt><dd>VIP Minivan</dd></div>
+        <div><dt>Yolcu Sayısı</dt><dd>3</dd></div>
+        <div><dt>Uçuş No</dt><dd>TK 2354</dd></div>
+        <div><dt>Not</dt><dd>Bebek koltuğu talep edilmiştir.</dd></div>
+      </dl>
+    </div>
+
+    <!-- Yolcu listesi -->
+    <div class="ap-card">
+      <h2 class="ap-card-title" style="margin-bottom:1rem">Yolcu Listesi</h2>
+      <table class="ap-table">
+        <thead><tr><th>#</th><th>Ad Soyad</th></tr></thead>
+        <tbody>
+          <tr><td data-label="#">1</td><td data-label="Ad Soyad">Ahmet Yılmaz</td></tr>
+          <tr><td data-label="#">2</td><td data-label="Ad Soyad">Ayşe Yılmaz</td></tr>
+          <tr><td data-label="#">3</td><td data-label="Ad Soyad">Mehmet Yılmaz</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Şoför & araç -->
+    <div class="ap-card">
+      <h2 class="ap-card-title" style="margin-bottom:1rem">Şoför ve Araç Bilgileri</h2>
+      <form class="ap-form-grid" onsubmit="return false;">
+        <div><label class="ap-label" for="sfSofor">Şoför Ad Soyad</label><input id="sfSofor" type="text" class="ap-input" placeholder="Şoför adı soyadı"></div>
+        <div><label class="ap-label" for="sfTel">Şoför Telefon</label><input id="sfTel" type="tel" class="ap-input" placeholder="+90 5__ ___ __ __"></div>
+        <div><label class="ap-label" for="sfPlaka">Araç Plakası</label><input id="sfPlaka" type="text" class="ap-input" placeholder="07 ABC 123" style="text-transform:uppercase"></div>
+        <div><label class="ap-label" for="sfLink">Harici Link (External Link)</label><input id="sfLink" type="url" class="ap-input" placeholder="https://"></div>
+        <div class="span-2 ap-btn-actions">
+          <button type="submit" class="ap-btn ap-btn-primary"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Kaydet</button>
+          <button type="button" class="ap-btn ap-btn-outline ap-noprint" onclick="window.print()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>Yazdır</button>
+          <a href="#" target="_blank" rel="noopener" class="ap-btn ap-btn-outline"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Harici Link</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

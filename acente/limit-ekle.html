@@ -1,0 +1,67 @@
+<!-- Acente Paneli > Limit Ekle (<main> içine include edilir) -->
+<link rel="stylesheet" href="/assets/css/acente.css">
+<div class="ap-page">
+  <div class="ap-wrap">
+    <h1 class="ap-title">Limit Ekle</h1>
+
+    <nav class="ap-tabs">
+      <a href="dashboard.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Dashboard</a>
+      <a href="rezervasyonlar.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Rezervasyonlar</a>
+      <a href="seferlerim.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>Seferlerim</a>
+      <a href="hesap-ekstresi.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Hesap Ekstresi</a>
+      <a href="limit-ekle.html" class="ap-tab active"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Limit Ekle</a>
+      <a href="hesap-bilgileri.html" class="ap-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>Hesap Bilgileri</a>
+    </nav>
+
+    <div class="ap-card" style="max-width:40rem;margin-left:auto;margin-right:auto">
+      <h2 class="ap-card-title" style="margin-bottom:1rem">Kredi Kartı ile Bakiye Yükle</h2>
+
+      <div class="ap-cc">
+        <div class="ap-cc-row"><span>Kredi Kartı</span><span>VISA / MC</span></div>
+        <div class="ap-cc-no" id="ccPreviewNo">•••• •••• •••• ••••</div>
+        <div class="ap-cc-row"><span id="ccPreviewName">AD SOYAD</span><span id="ccPreviewExp">AA/YY</span></div>
+      </div>
+
+      <form class="ap-form-grid" onsubmit="return false;" autocomplete="on">
+        <div class="span-2"><label class="ap-label" for="ccName">Kart Üzerindeki İsim</label><input id="ccName" type="text" class="ap-input" autocomplete="cc-name" placeholder="AD SOYAD" style="text-transform:uppercase"></div>
+        <div class="span-2"><label class="ap-label" for="ccNo">Kart Numarası</label><input id="ccNo" type="text" class="ap-input" inputmode="numeric" maxlength="19" autocomplete="cc-number" placeholder="0000 0000 0000 0000"></div>
+        <div><label class="ap-label" for="ccExp">Son Kullanma (AA/YY)</label><input id="ccExp" type="text" class="ap-input" inputmode="numeric" maxlength="5" autocomplete="cc-exp" placeholder="AA/YY"></div>
+        <div><label class="ap-label" for="ccCvv">CVV</label><input id="ccCvv" type="password" class="ap-input" inputmode="numeric" maxlength="4" autocomplete="cc-csc" placeholder="•••"></div>
+
+        <div class="span-2">
+          <span class="ap-label">Döviz</span>
+          <div class="ap-seg">
+            <div><input type="radio" name="cur" id="curTRY" value="TRY" checked><label for="curTRY">₺ TRY</label></div>
+            <div><input type="radio" name="cur" id="curUSD" value="USD"><label for="curUSD">$ USD</label></div>
+            <div><input type="radio" name="cur" id="curEUR" value="EUR"><label for="curEUR">€ EUR</label></div>
+            <div><input type="radio" name="cur" id="curGBP" value="GBP"><label for="curGBP">£ GBP</label></div>
+          </div>
+        </div>
+        <div class="span-2">
+          <label class="ap-label" for="ccAmount">Tutar</label>
+          <input id="ccAmount" type="number" min="1" step="0.01" class="ap-input" inputmode="decimal" placeholder="0,00">
+          <p class="ap-hint">Ödeme güvenli ödeme sayfasında 3D Secure ile onaylanır.</p>
+        </div>
+        <div class="span-2"><button type="submit" class="ap-btn ap-btn-primary ap-btn-block"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>Ödemeyi Tamamla</button></div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var no = document.getElementById('ccNo'), exp = document.getElementById('ccExp'), nm = document.getElementById('ccName');
+  no.addEventListener('input', function () {
+    var v = no.value.replace(/\D/g, '').slice(0, 16);
+    no.value = v.replace(/(.{4})/g, '$1 ').trim();
+    document.getElementById('ccPreviewNo').textContent = no.value || '•••• •••• •••• ••••';
+  });
+  exp.addEventListener('input', function () {
+    var v = exp.value.replace(/\D/g, '').slice(0, 4);
+    exp.value = v.length > 2 ? v.slice(0, 2) + '/' + v.slice(2) : v;
+    document.getElementById('ccPreviewExp').textContent = exp.value || 'AA/YY';
+  });
+  nm.addEventListener('input', function () {
+    document.getElementById('ccPreviewName').textContent = nm.value.toUpperCase() || 'AD SOYAD';
+  });
+})();
+</script>

@@ -1,0 +1,134 @@
+/* Acente Paneli - style.css ile uyumlu (primary #f97316, Montserrat) */
+.ap-page { min-height: 100vh; padding: 1.5rem 0 3rem; }
+.ap-wrap { max-width: 80rem; margin: 0 auto; padding: 0 1rem; }
+@media (min-width: 640px) { .ap-wrap { padding: 0 1.5rem; } }
+@media (min-width: 1024px) { .ap-wrap { padding: 0 2rem; } }
+
+.ap-title { font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 1rem; }
+@media (min-width: 768px) { .ap-title { font-size: 1.875rem; } }
+
+/* Sekmeler */
+.ap-tabs { display: flex; gap: .5rem; overflow-x: auto; padding-bottom: .5rem; margin-bottom: 1.25rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.ap-tabs::-webkit-scrollbar { display: none; }
+.ap-tab { flex: 0 0 auto; display: inline-flex; align-items: center; gap: .4rem; padding: .55rem 1rem; border-radius: 9999px; border: 1px solid #e5e7eb; background: #fff; color: #4b5563; font-size: .875rem; font-weight: 500; white-space: nowrap; transition: all .15s; }
+.ap-tab:hover { color: #f97316; border-color: #f97316; }
+.ap-tab.active { background: #f97316; border-color: #f97316; color: #fff; }
+.ap-tab svg { width: 1rem; height: 1rem; }
+
+/* Kart */
+.ap-card { background: #fff; border: 1px solid #e5e7eb; border-radius: .75rem; box-shadow: 0 1px 2px rgba(0,0,0,.05); padding: 1rem; margin-bottom: 1.25rem; }
+@media (min-width: 768px) { .ap-card { padding: 1.5rem; } }
+.ap-card-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: 1rem; }
+.ap-card-title { font-size: 1.05rem; font-weight: 700; color: #111827; }
+
+/* Stat */
+.ap-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; margin-bottom: 1.25rem; }
+@media (min-width: 1024px) { .ap-stats { grid-template-columns: repeat(4, 1fr); gap: 1rem; } }
+.ap-stat { background: #fff; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1rem; display: flex; align-items: center; gap: .75rem; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+.ap-stat-icon { flex: 0 0 auto; width: 2.75rem; height: 2.75rem; border-radius: .75rem; display: flex; align-items: center; justify-content: center; background: #ffedd5; color: #f97316; }
+.ap-stat-icon svg { width: 1.4rem; height: 1.4rem; }
+.ap-stat-icon.green { background: #ecfccb; color: #65a30d; }
+.ap-stat-icon.blue { background: #e0e7ff; color: #637aff; }
+.ap-stat-icon.gray { background: #f3f4f6; color: #4b5563; }
+.ap-stat-label { font-size: .75rem; color: #6b7280; }
+.ap-stat-value { font-size: 1.15rem; font-weight: 700; color: #111827; line-height: 1.2; }
+@media (min-width: 768px) { .ap-stat-value { font-size: 1.4rem; } }
+
+/* Filtre */
+.ap-filter { display: grid; grid-template-columns: 1fr; gap: .75rem; align-items: end; }
+@media (min-width: 640px) { .ap-filter { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .ap-filter.cols-3 { grid-template-columns: 1fr 1fr auto; } .ap-filter.cols-4 { grid-template-columns: 1fr 1fr 1fr auto; } }
+
+/* Form */
+.ap-label { display: block; font-size: .8rem; font-weight: 600; color: #374151; margin-bottom: .35rem; }
+.ap-input { width: 100%; padding: .6rem .9rem; border: 1px solid #d1d5db; border-radius: .5rem; background: #fff; font-size: .875rem; color: #111827; outline: none; transition: border-color .15s, box-shadow .15s; }
+.ap-input:focus { border-color: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,.15); }
+.ap-form-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 640px) { .ap-form-grid { grid-template-columns: repeat(2, 1fr); } .ap-form-grid .span-2 { grid-column: span 2; } }
+.ap-hint { font-size: .75rem; color: #6b7280; margin-top: .25rem; }
+
+/* Butonlar */
+.ap-btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; padding: .6rem 1.1rem; border-radius: .5rem; font-size: .875rem; font-weight: 500; border: 1px solid transparent; cursor: pointer; transition: all .15s; }
+.ap-btn svg { width: 1rem; height: 1rem; }
+.ap-btn-primary { background: #f97316; color: #fff; }
+.ap-btn-primary:hover { background: #ea580c; }
+.ap-btn-outline { background: #fff; color: #374151; border-color: #d1d5db; }
+.ap-btn-outline:hover { color: #f97316; border-color: #f97316; }
+.ap-btn-block { width: 100%; }
+.ap-btn-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+@media (max-width: 640px) { .ap-btn-actions .ap-btn { flex: 1 1 100%; } }
+
+/* Ikon butonlar */
+.ap-icons { display: inline-flex; gap: .4rem; }
+.ap-icon-btn { width: 2.1rem; height: 2.1rem; display: inline-flex; align-items: center; justify-content: center; border-radius: .5rem; border: 1px solid #e5e7eb; background: #fff; color: #6b7280; transition: all .15s; cursor: pointer; }
+.ap-icon-btn svg { width: 1.1rem; height: 1.1rem; }
+.ap-icon-btn.view:hover { color: #637aff; border-color: #637aff; background: #eef0ff; }
+.ap-icon-btn.ok:hover { color: #fff; border-color: #8BC34A; background: #8BC34A; }
+.ap-icon-btn.cancel:hover { color: #fff; border-color: #ef4444; background: #ef4444; }
+.ap-icon-btn.excel { width: auto; padding: 0 .8rem; gap: .4rem; font-size: .8rem; font-weight: 500; color: #15803d; border-color: #86efac; background: #f0fdf4; }
+.ap-icon-btn.excel:hover { background: #15803d; color: #fff; border-color: #15803d; }
+
+/* Rozet */
+.ap-badge { display: inline-block; padding: .15rem .6rem; border-radius: 9999px; font-size: .72rem; font-weight: 600; }
+.ap-badge.green { background: #ecfccb; color: #4d7c0f; }
+.ap-badge.orange { background: #ffedd5; color: #c2410c; }
+.ap-badge.red { background: #fee2e2; color: #b91c1c; }
+.ap-badge.blue { background: #e0e7ff; color: #3b4fd6; }
+
+/* Tablo - mobilde kart gorunumu (td data-label) */
+.ap-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.ap-table thead th { text-align: left; padding: .7rem .75rem; background: #f9fafb; color: #6b7280; font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; border-bottom: 1px solid #e5e7eb; white-space: nowrap; }
+.ap-table tbody td { padding: .75rem; border-bottom: 1px solid #f3f4f6; color: #374151; vertical-align: middle; }
+.ap-table tbody tr:hover { background: #fff7ed; }
+.ap-table .num { text-align: right; white-space: nowrap; }
+.ap-table .act { text-align: center; white-space: nowrap; }
+.text-plus { color: #4d7c0f; font-weight: 600; }
+.text-minus { color: #dc2626; font-weight: 600; }
+@media (max-width: 768px) {
+  .ap-table thead { display: none; }
+  .ap-table, .ap-table tbody, .ap-table tr, .ap-table td { display: block; width: 100%; }
+  .ap-table tbody tr { border: 1px solid #e5e7eb; border-radius: .75rem; margin-bottom: .75rem; padding: .35rem .75rem; background: #fff; }
+  .ap-table tbody td { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .5rem 0; border-bottom: 1px dashed #f3f4f6; text-align: right; }
+  .ap-table tbody td:last-child { border-bottom: 0; }
+  .ap-table tbody td::before { content: attr(data-label); font-size: .72rem; font-weight: 600; color: #6b7280; text-transform: uppercase; text-align: left; flex: 0 0 auto; }
+  .ap-table .num, .ap-table .act { text-align: right; }
+}
+
+/* Label / deger listesi */
+.ap-dl > div { display: flex; flex-direction: column; gap: .15rem; padding: .7rem 0; border-bottom: 1px solid #f3f4f6; }
+.ap-dl > div:last-child { border-bottom: 0; }
+.ap-dl dt { font-size: .78rem; font-weight: 600; color: #6b7280; }
+.ap-dl dd { font-size: .9rem; color: #111827; font-weight: 500; word-break: break-word; }
+@media (min-width: 640px) { .ap-dl > div { flex-direction: row; align-items: center; } .ap-dl dt { width: 12rem; flex: 0 0 auto; } }
+
+/* Rezervasyon yon kutusu */
+.ap-trip { border: 1px solid #e5e7eb; border-radius: .75rem; overflow: hidden; margin-bottom: 1rem; background: #fff; }
+.ap-trip-head { display: flex; align-items: center; justify-content: space-between; padding: .6rem 1rem; background: #fff7ed; border-bottom: 1px solid #fed7aa; font-weight: 700; font-size: .85rem; color: #c2410c; }
+.ap-trip-body { display: grid; grid-template-columns: 1fr; gap: 1rem; padding: 1rem; }
+@media (min-width: 768px) { .ap-trip-body { grid-template-columns: 14rem 1fr; align-items: center; } }
+.ap-trip-img { width: 100%; max-height: 10rem; object-fit: contain; border-radius: .5rem; background: #f9fafb; }
+.ap-trip-info { display: grid; grid-template-columns: 1fr; gap: .75rem; }
+@media (min-width: 640px) { .ap-trip-info { grid-template-columns: repeat(2, 1fr); } }
+.ap-trip-info .full { grid-column: 1 / -1; }
+.ap-trip-info small { display: block; font-size: .72rem; font-weight: 600; color: #6b7280; text-transform: uppercase; }
+.ap-trip-info span { font-size: .9rem; font-weight: 500; color: #111827; }
+
+/* Kredi karti onizleme */
+.ap-cc { background: linear-gradient(135deg, #f97316, #ea580c); color: #fff; border-radius: 1rem; padding: 1.25rem; max-width: 22rem; margin: 0 auto 1.25rem; box-shadow: 0 10px 20px -5px rgba(249,115,22,.4); }
+.ap-cc-no { font-size: 1.15rem; letter-spacing: .12em; margin: 1.5rem 0 1rem; font-weight: 600; }
+.ap-cc-row { display: flex; justify-content: space-between; font-size: .75rem; opacity: .9; }
+
+/* Para birimi secimi */
+.ap-seg { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; }
+.ap-seg > div { position: relative; }
+.ap-seg input { position: absolute; opacity: 0; pointer-events: none; }
+.ap-seg label { display: block; text-align: center; padding: .6rem .25rem; border: 1px solid #d1d5db; border-radius: .5rem; font-size: .85rem; font-weight: 600; color: #4b5563; cursor: pointer; transition: all .15s; }
+.ap-seg input:checked + label { background: #f97316; border-color: #f97316; color: #fff; }
+
+.ap-two-col { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+@media (min-width: 1024px) { .ap-two-col { grid-template-columns: 1fr 1fr; } .ap-two-col > .ap-card { margin-bottom: 0; } }
+
+@media print {
+  header, footer, .mobile-menu, .ap-tabs, .ap-noprint { display: none !important; }
+  .ap-card { box-shadow: none; }
+}
